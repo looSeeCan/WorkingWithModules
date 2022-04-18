@@ -4,6 +4,7 @@
  * Licensed under the MIT license
  */
 
+//this is a test to see if github desktop will detect this change
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
