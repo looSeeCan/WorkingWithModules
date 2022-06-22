@@ -1,4 +1,4 @@
-import { format } from "path";
+import { format } from "path";//idk where this came from. I don't see it in the tutorial anywhere
 
 const sessionUrl = "sessions.json"
 
@@ -20,7 +20,7 @@ function getSessions(){
 // export getsessons; cant do this
 // export {getSessions as blahblah}//rename it whatver you want
 //export {getSessions as default};
-export default {getSessions};// it wants it as a list
+export {getSessions as default, sessionUrl};// it wants it as a list
 
 //agragating modules
 // export {sessionTemplate} from './template.js';//I can export sessonTemplate from this file. I am not importing anything from template

@@ -1,13 +1,15 @@
 const errorMessage = '<p><em>You do not have any list items yet. Try adding one with the form above.</em></p>';
 
 const applyTemplate = (item) => {
-    `<div class="col-xs-12 col-sm-4 col-md-4 adj_text"><h3>${item.title}</h3>
-        <p>${item.tagline}</p>
-        <img src="${item.img}" alt="${item.alt}" />
-        <div class="read-more-btn">
-            <a href="${item.link}" class="btn-oval">Learn More</a>
-        </div>
-    </div>`
+    return(
+        `<div class="col-xs-12 col-sm-4 col-md-4 adj_text"><h3>${item.title}</h3>
+                <p>${item.tagline}</p>
+                <img src="${item.img}" alt="${item.alt}" />
+                <div class="read-more-btn">
+                    <a href="${item.link}" class="btn-oval">Learn More</a>
+                </div>
+            </div>`
+    )
 }
 
 function sessionTemplate (sessions) {
@@ -17,3 +19,5 @@ function sessionTemplate (sessions) {
     
     return '' + sessions.map(applyTemplate).join("") + "";
 };
+
+export {sessionTemplate as default, errorMessage};

@@ -1,4 +1,6 @@
 import getSessions from "./sessionsRepository.js";
+import sessionTemplate from "./template.js";
+
 
 function render() {
     var list = document.querySelector("#sessions");
@@ -10,7 +12,11 @@ var data = {
     listItems: [],
 };
 
-getSessions().then((sessions) => {
+// const it = getSessions.getSessions();
+// console.log(it);
+
+getSessions()
+    .then((sessions) => {
     console.log("promises!");
     data.listItems = sessions;
     render();
