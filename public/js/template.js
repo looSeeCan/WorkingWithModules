@@ -20,4 +20,4 @@ function sessionTemplate (sessions) {
     return '' + sessions.map(applyTemplate).join("") + "";
 };
 
-export {sessionTemplate as default, errorMessage};
+export {sessionTemplate, errorMessage};
